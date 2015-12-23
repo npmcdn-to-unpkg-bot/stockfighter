@@ -90,19 +90,3 @@ class Stockfighter:
             "market",
         ]
         print(order_types)
-
-sf = Stockfighter(
-    account="ELB2103982",
-    venue="FIPBEX",
-    api_key="c9fb32390dd97a40eb643d02dc83f6f520d0794b",
-)
-
-sf.get_latest_quote("XIXO")
-sf.get_orderbook("XIXO")
-sf.place_order(
-    stock="XIXO",
-    order_type="limit",
-    quantity=1000,
-    price=5900,
-    direction="buy",
-)
