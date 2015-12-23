@@ -39,8 +39,7 @@ class Stockfighter:
                 stock,
             ))
         response = self._get(url)
-        print(json.dumps(response.json(), indent=4))
-        return response.json()
+        return response
 
     def get_latest_quote(self, stock):
         url = urljoin(
@@ -50,8 +49,7 @@ class Stockfighter:
                 stock,
             ))
         response = self._get(url)
-        print(json.dumps(response.json(), indent=4))
-        return response.json()
+        return response
 
     def place_order(self, **kwargs):
         data = {
@@ -70,8 +68,7 @@ class Stockfighter:
                 kwargs.get("stock"),
             ))
         response = self._post(url, json=data)
-        print(json.dumps(response.json(), indent=4))
-        return response.json()
+        return response
 
     def stats(self, quote):
         if "ask" in quote and "bid" in quote:
