@@ -1,0 +1,3 @@
+influxdb==2.11.0
+requests==2.9.1
+tox==2.3.1
